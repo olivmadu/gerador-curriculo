@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Currículos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho da aplicação -->
+    <header class="app-header">
+        <h1>Gerador de Currículos</h1>
+    </header>
+
+    <main>
+        <!-- Formulário para inserir informações -->
+        <section class="form-section">
+            <h2>Preencha as informações</h2>
+            <form id="resumeForm" class="form-container">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Nome completo</label>
+                    <input type="text" id="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="city"><i class="fas fa-map-marker-alt"></i> Cidade e Estado</label>
+                    <input type="text" id="city" placeholder="Digite sua cidade e estado" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</label>
+                    <input type="url" id="linkedin" placeholder="Link do perfil no LinkedIn" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Telefone</label>
+                    <input type="tel" id="phone" placeholder="Digite seu telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="objective"><i class="fas fa-bullseye"></i> Objetivo</label>
+                    <textarea id="objective" rows="3" placeholder="Descreva o objetivo da sua carreira"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="summary"><i class="fas fa-pencil-alt"></i> Resumo profissional</label>
+                    <textarea id="summary" rows="3" placeholder="Breve resumo sobre você"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="experience"><i class="fas fa-briefcase"></i> Experiência profissional</label>
+                    <textarea id="experience" rows="4" placeholder="Descreva suas experiências (uma por linha)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="education"><i class="fas fa-graduation-cap"></i> Formação acadêmica</label>
+                    <textarea id="education" rows="4" placeholder="Insira sua formação (uma por linha)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="relevantCourses"><i class="fas fa-book"></i> Cursos relevantes</label>
+                    <textarea id="relevantCourses" rows="3" placeholder="Liste os cursos relevantes (separados por vírgula)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="leadership"><i class="fas fa-tasks"></i> Atividades de liderança e interesse</label>
+                    <textarea id="leadership" rows="4" placeholder="Descreva suas atividades de liderança e interesses"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="skills"><i class="fas fa-star"></i> Habilidades</label>
+                    <textarea id="skills" rows="3" placeholder="Liste suas habilidades (separadas por vírgula)"></textarea>
+                </div>
+            </form>
+        </section>
+
+        <!-- Currículo Gerado -->
+        <section class="preview-section">
+            <h2>Pré-visualização</h2>
+            <div id="resumePreview" class="resume-container"></div>
+            <button id="downloadBtn" class="btn-secondary">Baixar como PDF</button>
+        </section>
+    </main>
+
+    <!-- Biblioteca para exportação de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>

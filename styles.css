@@ -1,0 +1,171 @@
+:root {
+    --cor01: #30c9cf;
+    --cor02: #33eab6;
+    --cor03: #F9FAFB;
+    --cor04: #111827;
+    --cor05: #35b98d;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor03);
+    color: var(--cor04);
+}
+
+.app-header {
+    text-align: center;
+    background-color: var(--cor05);
+    color: var(--cor03);
+    padding: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Formulário de entrada */
+.form-section, .preview-section {
+    background-color: var(--cor03);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--cor01);
+    outline: none;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor01);
+    color: var(--cor04);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--cor02);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor02);
+}
+
+.preview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.resume-container {
+    padding: 20px;
+    background-color: white;
+    color: var(--cor04);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px; 
+}
+
+.resume-container .resume-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-container .resume-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resume-container .resume-header p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.resume-container hr {
+    border: none;
+    margin: 20px 0;
+}
+
+/* Seções do currículo */
+.resume-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cor04);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--cor01);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.resume-container p,
+.resume-container ul {
+    margin-bottom: 10px;
+}
+
+.resume-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.resume-container ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .resume-container {
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+    }
+}
